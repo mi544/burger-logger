@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
+    console.log(req.body);
     burger.addBurger(req.body, (result) => {
         if (!result.affectedRows) {
             res.status(500).end();
@@ -23,19 +24,27 @@ router.post("/api/burgers", (req, res) => {
     })
 });
 
-router.put("/api/burgers:id", (req, res) => {
-    req.body.id = req.params.id;
-    burger.updateBurger(req.body, (result) => {
-        if (!result.changedRows) {
-            res.status(404).end();
-        } else {
-            res.end();
+router.put("/api/burgers/:id", (req, res) => {
+    const {
+        id
+    } = req.params;
+    burger.updateBurger(req.body, {
+            id
+        },
+        (result) => {
+            if (!result.changedRows) {
+                res.status(404).end();
+            } else {
+                res.end();
+            }
         }
-    })
+    )
 });
 
-router.delete("/api/burgers:id", (req, res) => {
-    burger.deleteBurger(req.params.id, (result) => {
+router.delete("/api/burgers/:id", (req, res) => {
+    burger.deleteBurger({
+        id: req.params.id
+    }, result => {
         if (!result.affectedRows) {
             res.status(404).end();
         } else {

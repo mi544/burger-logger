@@ -19,7 +19,7 @@ const burger = {
         })
     },
 
-    deleteBurger: () => {
+    deleteBurger: (condition, cb) => {
         orm.deleteOne("burgers", condition, result => {
             cb(result);
         })
