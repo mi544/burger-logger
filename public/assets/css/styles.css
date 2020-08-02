@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 .flexbox-container {
     display: flex;
     justify-content: center;
@@ -67,7 +71,6 @@
     transform: rotate(90deg);
     max-width: 100%;
     max-height: 35vh;
-    padding: 20px 20px 0 0;
 
 }
 
@@ -77,7 +80,6 @@
     max-width: 100%;
     max-height: 35vh;
     margin-left: auto;
-    padding: 20px 20px 0 0;
 }
 
 .flexbox-container-3 {

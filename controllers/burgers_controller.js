@@ -12,7 +12,6 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-    console.log(req.body);
     burger.addBurger(req.body, (result) => {
         if (!result.affectedRows) {
             res.status(500).end();
