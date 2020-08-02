@@ -1,0 +1,74 @@
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbox-item {
+    width: 100px;
+    background-color: #dfdfdf;
+    border: 1px solid #333;
+}
+
+.flexbox-item-1 {
+    flex: 1 1 0;
+    min-height: 25vh;
+}
+
+.flexbox-item-2 {
+    flex: 1 1 20px;
+    min-height: 20vh;
+    max-height: 35vh;
+    min-width: 15rem;
+    text-align: center;
+}
+
+.flexbox-item-3 {
+    flex: 1 1 0;
+    min-height: 25vh;
+    max-height: 35vh;
+}
+
+.flexbox-item-1-1 {
+    flex: 1 1 0;
+    min-height: 60vh;
+}
+
+.flexbox-item-1-2 {
+    flex: 1 1 0;
+    min-height: 60vh;
+}
+
+.flexbox-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flexbox-item-burger {
+    margin: 5px;
+    min-width: 30vw;
+    min-height: 7vh;
+}
+
+.burger {
+    max-width: 100%;
+    max-height: 35vh;
+    filter: invert(49%) sepia(71%) saturate(2995%) hue-rotate(162deg) brightness(96%) contrast(101%);
+}
+
+.filler-left {
+    content: url("/assets/img/filler.png");
+    transform: rotate(90deg);
+    max-width: 100%;
+    max-height: 35vh;
+
+}
+
+.filler-right {
+    content: url("/assets/img/filler.png");
+    transform: rotate(180deg);
+    max-width: 100%;
+    max-height: 35vh;
+    margin-left: auto;
+}
