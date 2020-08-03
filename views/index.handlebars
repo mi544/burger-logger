@@ -9,30 +9,45 @@
     </div>
 </div>
 <div class="flexbox-container-burger-list">
-    <div class="flexbox-item flexbox-item-1-1">
+    <div class="flexbox-item-1-1">
         <div class="flexbox-container-2">
+            <h2>Burgers to Eat</h2>
             {{#each items}}
             {{#unless devoured}}
-            <div class="flexbox-item flexbox-item-burger">{{burger_name}}
-                <button class="eatButton" data-id={{id}}>Eat</button></div>
+            <div class="burgers flexbox-item-burger">
+                <div class="burgers-text">
+                    <div>{{burger_name}}</div>
+                    <button class="eatButton" data-id={{id}}>Eat</button>
+                </div>
+            </div>
             {{/unless}}
             {{/each}}
         </div>
     </div>
-    <div class="flexbox-item flexbox-item-1-2">
+    <div class="flexbox-item-1-2">
         <div class="flexbox-container-2">
+            <h2>You ate them already</h2>
+            <h5>(just for reference)</h5>
+            <h6 style="font-size:xx-small">(nutritional information is provided upon request)</h6>
             {{#each items}}
             {{#if devoured}}
-            <div class="flexbox-item flexbox-item-burger">{{burger_name}} <button class="deleteButton"
-                    data-id={{id}}>Delete</button></div>
+            <div class="burgers flexbox-item-burger">
+                <div class="burgers-text">{{burger_name}} <button class="deleteButton" data-id={{id}}>Delete</button>
+                </div>
+            </div>
             {{/if}}
             {{/each}}
         </div>
     </div>
 </div>
 <div class="flexbox-container-3">
+
     <div class="flexbox-item-textarea">
-        <textarea name="add a burger" id="addABurgerText" placeholder="Add a new burger"></textarea>
-        <div class="flexbox-item-addButton"><input type="button" id="addButton" value="Add"></div>
+        <form>
+            <input name="addBurgerField" id="addABurgerText" placeholder="Add a new burger">
+    </div>
+    <div class="flexbox-item-addButton">
+        <input type="submit" id="addButton" value="Add">
+        </form>
     </div>
 </div>

@@ -1,5 +1,8 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body * {
     margin: 0;
+    font-family: 'Fredoka One', cursive;
 }
 
 .flexbox-container {
@@ -12,16 +15,15 @@ body {
     display: flex;
 }
 
+.flexbox-container-burger-list button {
+    border: none;
+    padding: .7vh 2vw .7vh 2vw;
+}
+
 .flexbox-container-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.flexbox-item {
-    width: 100px;
-    background-color: #dfdfdf;
-    border: 1px solid #333;
 }
 
 .flexbox-item-1 {
@@ -53,11 +55,21 @@ body {
     min-height: 35vh;
 }
 
-
-.flexbox-item-burger {
+.burgers {
+    min-width: 20vw;
+    min-height: 9vh;
     margin: 5px;
-    min-width: 30vw;
-    min-height: 7vh;
+    border: 1px solid #333;
+    background-color: #ffdae0;
+    border: 1px white solid;
+    border-radius: 200px;
+    box-shadow: 2px 3px 4px #92faff;
+}
+
+.burgers-text {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    text-shadow: 0 0 6px #92faff, 0 0 50px #c0ebff;
 }
 
 .burger {
@@ -89,12 +101,30 @@ body {
     flex-wrap: wrap;
 }
 
-#addButton,
-#addABurger {
-    display: block;
+.flexbox-container-3>* {
+    width: 50%;
+    text-align: center;
+    margin: 1vh 50% 2vh 50%;
+    /* box-shadow: ; */
 }
 
-.flexbox-item-textarea,
-.flexbox-item-addButton {
+.flexbox-container-3 input {
+    display: block;
     text-align: center;
+    min-width: 10vw;
+    min-height: 10vh;
+    border: none;
+    box-shadow: 0 0 4px #bfffe2, 0 0 4px #bfffe2, 0 0 4px #bfffe2, 0 0 4px #bfffe2;
+}
+
+.flexbox-container-3 [name*="Burger"] {
+    min-width: 20vw;
+}
+
+.burgers-text>* {
+    display: inline-block;
+}
+
+.burgers-text>button {
+    margin-left: auto;
 }
