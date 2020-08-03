@@ -12,6 +12,10 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
+    // checking if no text was sent
+    if (!req.body.burger_name) {
+        return res.end();
+    }
     burger.addBurger(req.body, (result) => {
         if (!result.affectedRows) {
             res.status(500).end();
