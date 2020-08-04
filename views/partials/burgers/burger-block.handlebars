@@ -1,5 +1,5 @@
 <div class="burgers flexbox-item-burger">
     <div class="burgers-text">{{burger_name}}<button class="{{#if devoured}}deleteButton{{else}}eatButton{{/if}}"
-            data-id={{id}}>{{#unless isMarksBurger burger_name}}{{#if devoured}}Delete{{else}}Eat{{/if}}{{/unless}}</button>
+            data-id={{id}}>{{#unless (isMarksBurger burger_name)}}{{#if devoured}}Delete{{else}}Eat{{/if}}{{/unless}}</button>
     </div>
 </div>
