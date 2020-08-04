@@ -32,7 +32,8 @@
             {{#each items}}
             {{#if devoured}}
             <div class="burgers flexbox-item-burger">
-                <div class="burgers-text">{{burger_name}} <button class="deleteButton" data-id={{id}}>Delete</button>
+                <div class="burgers-text">{{burger_name}}{{#if isMarksBurger}}<button class="deleteButton"
+                        data-id={{id}}>Delete</button>{{/if}}
                 </div>
             </div>
             {{/if}}

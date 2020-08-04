@@ -12,6 +12,10 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+exphbs.registerHelper('isMarksBurger', function (value) {
+    return burger_name !== "Mark Gire's special burger";
+});
+
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
