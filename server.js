@@ -15,7 +15,7 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({
     helpers: {
         isMarksBurger: function (value) {
-            return value === "Mark's Gire Special Burger"
+            return value === "Mark Gire's special burger"
         }
     },
     defaultLayout: "main"
