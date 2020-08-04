@@ -14,12 +14,7 @@
             <h2>Burgers to Eat</h2>
             {{#each items}}
             {{#unless devoured}}
-            <div class="burgers flexbox-item-burger">
-                <div class="burgers-text">
-                    <div>{{burger_name}}</div>
-                    <button class="eatButton" data-id={{id}}>Eat</button>
-                </div>
-            </div>
+            {{> burgers/burger-block}}
             {{/unless}}
             {{/each}}
         </div>
@@ -31,10 +26,7 @@
             <h6 style="font-size:xx-small">(nutritional information is provided upon request)</h6>
             {{#each items}}
             {{#if devoured}}
-            <div class="burgers flexbox-item-burger">
-                <div class="burgers-text">{{burger_name}}<button class="deleteButton" data-id={{id}}>Delete</button>
-                </div>
-            </div>
+            {{> burgers/burger-block}}
             {{/if}}
             {{/each}}
         </div>
