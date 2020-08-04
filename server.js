@@ -1,6 +1,12 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
+// exphbs.registerHelper(
+//     "isMarksBurger",
+//     function (value) {
+//         return value !== "Mark Gire's special burger";
+//     });
+
 const PORT = process.env.PORT || 8080;
 
 const app = express();
@@ -11,10 +17,6 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.use(express.static("public"));
-
-exphbs.registerHelper('isMarksBurger', function (value) {
-    return burger_name !== "Mark Gire's special burger";
-});
 
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
